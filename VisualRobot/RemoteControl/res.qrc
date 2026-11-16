@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/RemoteControl">
+        <file>image/remotecontrol.svg</file>
+        <file>qml/Main.qml</file>
+    </qresource>
+</RCC>
