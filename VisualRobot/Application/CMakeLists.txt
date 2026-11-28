@@ -7,8 +7,8 @@ project(Application VERSION ${PROJECT_VERSION} LANGUAGES CXX)
 
 # @brief Create plugin directories in the application build directory during configuration.
 file(MAKE_DIRECTORY
-    "${CMAKE_CURRENT_BINARY_DIR}/plugins/device"
-    "${CMAKE_CURRENT_BINARY_DIR}/plugins/ui"
+    "${CMAKE_CURRENT_BINARY_DIR}/${PLUGINS_DIR_NAME}/device"
+    "${CMAKE_CURRENT_BINARY_DIR}/${PLUGINS_DIR_NAME}/ui"
 )
 
 set(APP_NAME "VisualRobot")
@@ -48,6 +48,8 @@ qt_add_executable(${APP_NAME}
 
 qt_add_qml_module(${APP_NAME}
     URI Application
+    DEPENDENCIES
+        TARGET QuickKit
     QML_FILES
         Main.qml
         SOURCES application.h application.cpp

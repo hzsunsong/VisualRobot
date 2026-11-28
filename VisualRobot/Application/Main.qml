@@ -6,6 +6,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QuickKit 1.0
 
 ApplicationWindow {
     id: window
@@ -58,6 +59,16 @@ ApplicationWindow {
             Loader {
                 sourceComponent: null !== $app ? $app.qmlComponent("RemoteControlPlugin") : null
             }
+        }
+
+        MyItem {
+            Layout.fillWidth: true
+            Layout.preferredHeight: 60
+        }
+
+        MyItemControls {
+            Layout.fillWidth: true
+            Layout.preferredHeight: 60
         }
     }
 }

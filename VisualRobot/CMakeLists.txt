@@ -15,6 +15,9 @@ set(CMAKE_DEBUG_POSTFIX "d")
 set(SHARE_DIR "share")
 set(SHARE_LIB_DIR "${CMAKE_CURRENT_LIST_DIR}/../${SHARE_DIR}")
 set(THIRDPARTY_DIR "")
+set(APPLICATION_DIR "Application")
+set(PLUGINS_DIR_NAME "plugins")
+set(PLUGINS_DIR "${APPLICATION_DIR}/${PLUGINS_DIR_NAME}")
 
 set(CMAKE_INSTALL_PREFIX "${SHARE_LIB_DIR}"
   CACHE PATH "Installation directory." FORCE)
@@ -38,6 +41,7 @@ endif()
 add_subdirectory(Pluma-1.1)
 add_subdirectory(cxx)
 add_subdirectory(Qtx)
+add_subdirectory(QuickKit)
 
 add_subdirectory(Device)
 add_subdirectory(DeviceBase)

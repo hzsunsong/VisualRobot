@@ -50,7 +50,7 @@ target_link_libraries(${PROJECT_NAME}
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "$<TARGET_FILE:${PROJECT_NAME}>"
-        "${CMAKE_CURRENT_BINARY_DIR}/../Application/plugins/device"
+        "${CMAKE_CURRENT_BINARY_DIR}/../${PLUGINS_DIR}/device"
     VERBATIM
 )
 
